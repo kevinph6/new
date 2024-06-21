@@ -2,32 +2,185 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Milky Nice";
+  src: url("./../../public/milky_nice/MilkyNice.ttf");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #DAF3FF;
+  font-family: "Milky Nice" !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+.text-shadows {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--Black, #222120);
+}
+
+.text-shadows2 {
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #000;
+}
+
+.nav-links:hover {
+  text-shadow: 1.5px 1.5px 0px #222120;
+
+}
+
+.active {
+  text-shadow: 2.333px 2.333px 0px #222120;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--Black, #222120);
+
+}
+
+.gradient-bg {
+  border-radius: 58.333px;
+  border: 1px solid #10100F;
+  background: var(--Primary, linear-gradient(90deg, #9945FF 0%, #14F195 100%));
+  box-shadow: 2.333px 2.333px 0px 0px #222120;
+  transition: all 0.3s ease-in-out;
+}
+
+.only-gradient-bg {
+  background: var(--Primary, linear-gradient(90deg, #9945FF 0%, #14F195 100%));
+}
+
+
+
+.main-heading {
+  text-shadow: 9px 9px 0px #222120;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: var(--Black, #222120);
+}
+
+.main-heading-2 {
+  text-shadow: 2.333px 2.333px 0px #222120;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #000;
+}
+
+.heading-shadow {
+  text-shadow: 2px 2px 0px #222120;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+}
+
+.small-heading {
+  text-shadow: 2px 2px 0px #222120;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #000;
+}
+
+@media (max-width:639px) {
+  .main-heading {
+    text-shadow: 4px 4px 0px #222120;
+    -webkit-text-stroke-width: 3px;
   }
+
+  .heading-shadow {
+    text-shadow: 1px 1px 0px #222120;
+    -webkit-text-stroke-width: 1.2px;
+
+  }
+
+  .text-shadows {
+    -webkit-text-stroke-width: 0.7px;
+  }
+
+  .text-shadows2 {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .main-heading-2 {
+    text-shadow: 1.7px 1.7px 0px #222120;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  .small-heading {
+    text-shadow: 1.4px 1.4px 0px #222120;
+    -webkit-text-stroke-width: 1.8px;
+  }
+}
+
+@media (min-width:640px) and (max-width:767px) {
+  .main-heading {
+    text-shadow: 4px 4px 0px #222120;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  .heading-shadow {
+    text-shadow: 1px 1px 0px #222120;
+    -webkit-text-stroke-width: 1.2px;
+
+  }
+
+  .text-shadows {
+    -webkit-text-stroke-width: 0.7px;
+  }
+
+  .text-shadows2 {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .main-heading-2 {
+    text-shadow: 2.333px 2.333px 0px #222120;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  .small-heading {
+    text-shadow: 1.4px 1.4px 0px #222120;
+    -webkit-text-stroke-width: 1.8px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+  .main-heading {
+    text-shadow: 5px 5px 0px #222120;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .heading-shadow {
+    text-shadow: 1px 1px 0px #222120;
+    -webkit-text-stroke-width: 1.2px;
+
+  }
+
+  .main-heading-2 {
+    text-shadow: 2.333px 2.333px 0px #222120;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .small-heading {
+    text-shadow: 1.7px 1.7px 0px #222120;
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1280px) {
+  .main-heading {
+    text-shadow: 6px 6px 0px #222120;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .heading-shadow {
+    text-shadow: 1.2px 1.2px 0px #222120;
+    -webkit-text-stroke-width: 1.2px;
+
+  }
+
+  .main-heading-2 {
+    text-shadow: 2.333px 2.333px 0px #222120;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .small-heading {
+    text-shadow: 1.7px 1.7px 0px #222120;
+    -webkit-text-stroke-width: 2.2px;
+  }
+
 }
