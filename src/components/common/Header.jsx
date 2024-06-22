@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="relative bg-[rgb(179,219,231)] px-4 sm:px-6 lg:px-8 2xl:px-10   py-5 md:py-6 z-10 backdrop-blur-md  ">
+      <div className="relative bg-[rgba(179,219,231,0.20)] px-4 sm:px-6 lg:px-8 2xl:px-10   py-5 md:py-6 z-10 backdrop-blur-md  ">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image

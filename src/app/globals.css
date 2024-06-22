@@ -15,6 +15,19 @@ body {
   font-family: "Milky Nice" !important;
 }
 
+.top-bg-img {
+  background-image: url("/img/png/hero-bg-1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mona {
+  background: var(--Primary, linear-gradient(90deg, #9945FF 0%, #14F195 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .text-shadows {
   -webkit-text-stroke-width: 1px;

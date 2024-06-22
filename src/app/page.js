@@ -12,8 +12,10 @@ import Tokenomics from "@/components/home-page/Tokenomics";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Hero />
+      <div className="top-bg-img">
+        <Header />
+        <Hero />
+      </div>
       <About />
       <HowToBuy />
       <Tokenomics />
