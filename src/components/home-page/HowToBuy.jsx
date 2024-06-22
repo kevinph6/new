@@ -88,7 +88,14 @@ function HowToBuy() {
             </div>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <Image
+        src={"/img/png/down-cut-3.png"}
+        width={1920}
+        height={48}
+        alt="cut image"
+        className="w-full h-[48px] object-cover "
+      />
     </>
   );
 }

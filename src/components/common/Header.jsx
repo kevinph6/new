@@ -55,19 +55,19 @@ const Header = () => {
               HOW TO BUY
             </Link>{" "}
             <Link
-              href="/"
+              href="#tokenomics"
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
             >
               TOKENOMICS
             </Link>{" "}
             <Link
-              href="/"
+              href="#roadmap"
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
             >
               ROADMAP
             </Link>{" "}
             <Link
-              href="/"
+              href="#faq"
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
             >
               FAQ
