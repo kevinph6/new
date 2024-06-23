@@ -41,7 +41,7 @@ function Tokenomics() {
               </div>
               <div className="flex flex-col gap-2.5 lg:gap-3.5 xl:gap-[18px]">
                 <div className="w-full rounded-full bg-[#A0C8D4] h-4 sm:h-[21px]">
-                  <span className="w-[20%] bg-[#16BAEE] rounded-full h-4 sm:h-[21px] block "></span>
+                  <span className="w-[80%] bg-[#16BAEE] rounded-full h-4 sm:h-[21px] block "></span>
                 </div>
                 <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px]">
                   90% Liquidity Pool

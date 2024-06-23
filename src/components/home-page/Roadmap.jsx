@@ -49,7 +49,7 @@ function Roadmap() {
                   <ul className="flex flex-col gap-2.5 md:gap-3 xl:gap-4">
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3 ">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block "></span>
-                      5% Dev Team
+                      Launch on Solana
                     </li>
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3 ">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block "></span>
@@ -136,7 +136,7 @@ function Roadmap() {
               <div className="flex flex-col gap-y-4">
                 <div className="border-2 border-black px-5 xl:px-8 py-4 xl:py-6 rounded-3xl shadow-[4px_4px_0px_0px_#0C0B0B] bg-[#B7DFEB] ">
                   <p className=" text-2xl sm:text-[28px] lg:text-[32px] text-white leading-[100%] tracking-[0.6px]  uppercase small-heading ">
-                    PHASE 1
+                    PHASE 3
                   </p>
                 </div>
 
@@ -144,15 +144,15 @@ function Roadmap() {
                   <ul className="flex flex-col gap-2.5 md:gap-3 xl:gap-4">
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3 ">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block "></span>
-                      5% Dev Team
+                      Trending on X{" "}
                     </li>
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3 ">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block "></span>
-                      Website Landing Page
+                      CG CMC Listing{" "}
                     </li>
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3 ">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block "></span>
-                      Presale
+                      NFT Airdrop{" "}
                     </li>
                   </ul>
                 </div>

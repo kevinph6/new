@@ -46,7 +46,7 @@ function HowToBuy() {
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center">
                   <Link
                     href={""}
-                    className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center gradient-bg hover:shadow-[2.333px_2.333px_10px_0px_#222120] md:py-4 py-2.5 px-4 md:px-6 "
+                    className="text-lg md:text-xl xl:text-2xl text-white   leading-[160%] tracking-[0.48px] text-center gradient-bg hover:shadow-[2.333px_2.333px_10px_0px_#222120] md:py-4 py-2.5 px-4 md:px-6 "
                   >
                     Create Wallet
                   </Link>
@@ -79,7 +79,7 @@ function HowToBuy() {
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center ">
                   <Link
                     href={""}
-                    className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center gradient-bg hover:shadow-[2.333px_2.333px_10px_0px_#222120] md:py-4 py-2.5 px-4 md:px-6 "
+                    className="text-lg md:text-xl xl:text-2xl text-white   leading-[160%] tracking-[0.48px] text-center gradient-bg hover:shadow-[2.333px_2.333px_10px_0px_#222120] md:py-4 py-2.5 px-4 md:px-6 "
                   >
                     Swap Now
                   </Link>
