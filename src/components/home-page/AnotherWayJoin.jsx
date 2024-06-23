@@ -20,7 +20,7 @@ function AnotherWayJoin() {
       <div className="bg-[#93BBC7]  py-24 xl:py-36 -mt-7">
         <div className="max-w-[1017px] px-4 sm:px-6 lg:px-8 2xl:px-10 mx-auto w-full">
           <h1 className="text-[40px] md:text-[48px] lg:text-[60px] xl:text-[72px] font-normal  leading-[100%] tracking-[1px] uppercase  text-white main-heading-2 text-center   ">
-            Another Way to <br /> Join the Presale
+            Another Way to <br className="hidden sm:block" /> Join the Presale
           </h1>
           <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] mt-5 lg:mt-6 text-center lg:px-16 xl:px-0 ">
             Having trouble with the DApp or want a simpler method? Participate
