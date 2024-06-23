@@ -25,7 +25,7 @@ function Exchange() {
                 Current Raise
               </p>
               <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px]">
-                $1.750
+                $800k USD
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ function Exchange() {
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
             </div>
             <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2">
-              Amount in BART you receive:
+              Amount in Lisana you receive:
             </p>{" "}
             <div
               className="bg-[#466E7A] rounded-[58px]  border border-black
@@ -77,14 +77,14 @@ function Exchange() {
             >
               <div className="border border-black bg-[#82AAB6] shadow-[1px_1px_0px_0px_#222120] p-1 items-center flex gap-x-2 rounded-full  ">
                 <Image
-                  src={"/img/svg/sponge.svg"}
+                  src={"/img/png/logo.png"}
                   width={32}
                   height={32}
                   alt="sponge"
                   className="max-w-[32px] h-auto w-full rounded-full overflow-hidden object-cover"
                 />{" "}
                 <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2">
-                  SPONGE
+                  Lisana
                 </p>
               </div>
               <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2">

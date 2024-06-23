@@ -35,7 +35,7 @@ function Hero() {
                         width={347}
                         height={115}
                         alt="mona"
-                        className=" max-w-[150px] sm:max-w-[160px] md:max-w-[180px] lg:max-w-[220px] xl:max-w-[340px] h-auto"
+                        className=" max-w-[150px] sm:max-w-[160px] md:max-w-[180px] lg:max-w-[220px] xl:max-w-[340px] h-auto pt-1 sm:pt-0"
                       />
                     </span>
                     Lisana
@@ -65,7 +65,7 @@ function Hero() {
                shadow-[8px_8px_0px_0px_#0C0B0B] p-3 sm:p-5 xl:p-8"
               >
                 <h2 className="text-center text-white heading-shadow text-base sm:text-lg lg:text-[22px] font-thin uppercase ">
-                  Buy the lisana presell now
+                  Buy the lisana now
                 </h2>
                 <CountdownTimer targetDate={targetDate} />
               </div>
