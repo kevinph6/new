@@ -57,9 +57,12 @@ function Exchange() {
                   SOL
                 </p>
               </div>
-              <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2">
-                0.00
-              </p>
+
+              <input
+                type="number"
+                className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
+                placeholder="0.00"
+              />
             </div>
             <div className="flex items-center my-2">
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
@@ -87,9 +90,11 @@ function Exchange() {
                   Lisana
                 </p>
               </div>
-              <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2">
-                0.00
-              </p>
+              <input
+                type="number"
+                className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
+                placeholder="0.00"
+              />
             </div>
           </div>
 
