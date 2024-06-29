@@ -32,7 +32,7 @@ function AnotherWayJoin() {
                 $LISANA
               </p>{" "}
               <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center mt-2 ">
-                (Minimum 0.5 SOL, Maximum 20 SOL).
+                (Minimum 0.5 SOL, Maximum Unlimited).
               </p>
             </div>
             <div className="max-w-[390px] w-full sm:max-w-[600px] md:max-w-[705px] mx-auto border-2 border-black rounded-3xl bg-[#B7DFEB] shadow-[8px_8px_0px_0px_#0C0B0B] py-6 lg:py-8 px-5 lg:px-6 flex flex-col sm:flex-row gap-5 lg:gap-10">
@@ -51,7 +51,7 @@ function AnotherWayJoin() {
                 </p>
                 <div>
                   <p className="text-sm md:text-base xl:text-lg text-white text-shadows leading-[160%]     mt-3 text-ellipsis overflow-hidden  truncate	 ">
-                    0x0bf9cc2ea2af3d2230d25389101bf3a12b8ea544
+                    9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
                   </p>
                   <button
                     className="gradient-bg text-white text-base md:text-lg lg:text-xl px-5 md:px-6 py-3 md:py-4 mt-2"
