@@ -4,20 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Exchange() {
-  const [solAmount, setSolAmount] = useState(0); // State to store the SOL amount
-  const [lisanaAmount, setLisanaAmount] = useState(0); // State to store the Lisana amount
+  const [solAmount, setSolAmount] = useState(''); // State to store the SOL amount
+  const [lisanaAmount, setLisanaAmount] = useState(''); // State to store the Lisana amount
   const exchangeRate = 20000; // 1 SOL = 20000 Lisana
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
-    const value = parseFloat(e.target.value) || 0;
+    const value = parseFloat(e.target.value) || '';
     setSolAmount(value);
     setLisanaAmount(value * exchangeRate);
   };
 
   // Function to handle Lisana amount change
   const handleLisanaChange = (e) => {
-    const value = parseFloat(e.target.value) || 0;
+    const value = parseFloat(e.target.value) || '';
     setLisanaAmount(value);
     setSolAmount(value / exchangeRate);
   };
@@ -56,7 +56,7 @@ function Exchange() {
                 <span className="me-2">
                   <WalletIcon />
                 </span>{" "}
-                {solAmount.toFixed(2)} SOL
+                {solAmount !== '' ? solAmount : '0.00'} SOL
               </p>
             </div>
             <div
@@ -81,6 +81,7 @@ function Exchange() {
                 placeholder="0.00"
                 value={solAmount}
                 onChange={handleSolChange}
+                onFocus={() => setSolAmount('')}
               />
             </div>
             <div className="flex items-center my-2">
@@ -115,6 +116,7 @@ function Exchange() {
                 placeholder="0.00"
                 value={lisanaAmount}
                 onChange={handleLisanaChange}
+                onFocus={() => setLisanaAmount('')}
               />
             </div>
           </div>
