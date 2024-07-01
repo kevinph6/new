@@ -11,19 +11,19 @@ function Exchange() {
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
-    const value = parseFloat(e.target.value) || '';
+    const value = e.target.value;
     setSolAmount(value);
-    if (isSolToLisana) {
-      setLisanaAmount(value * exchangeRate);
+    if (isSolToLisana && !isNaN(value) && value !== '') {
+      setLisanaAmount((parseFloat(value) * exchangeRate).toString());
     }
   };
 
   // Function to handle Lisana amount change
   const handleLisanaChange = (e) => {
-    const value = parseFloat(e.target.value) || '';
+    const value = e.target.value;
     setLisanaAmount(value);
-    if (!isSolToLisana) {
-      setSolAmount(value / exchangeRate);
+    if (!isSolToLisana && !isNaN(value) && value !== '') {
+      setSolAmount((parseFloat(value) / exchangeRate).toString());
     }
   };
 
@@ -88,7 +88,7 @@ function Exchange() {
                 </p>
               </div>
               <input
-                type="number"
+                type="text"
                 className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
                 placeholder="0.00"
                 value={isSolToLisana ? solAmount : lisanaAmount}
@@ -123,7 +123,7 @@ function Exchange() {
                 </p>
               </div>
               <input
-                type="number"
+                type="text"
                 className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
                 placeholder="0.00"
                 value={!isSolToLisana ? solAmount : lisanaAmount}
