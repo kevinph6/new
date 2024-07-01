@@ -32,7 +32,7 @@ function AnotherWayJoin() {
                 $LISANA
               </p>{" "}
               <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center mt-2 ">
-                (Minimum 0.5 SOL, Maximum Unlimited).
+                (Minimum 0.5 SOL).
               </p>
             </div>
             <div className="max-w-[390px] w-full sm:max-w-[600px] md:max-w-[705px] mx-auto border-2 border-black rounded-3xl bg-[#B7DFEB] shadow-[8px_8px_0px_0px_#0C0B0B] py-6 lg:py-8 px-5 lg:px-6 flex flex-col sm:flex-row gap-5 lg:gap-10">
