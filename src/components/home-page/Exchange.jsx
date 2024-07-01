@@ -11,7 +11,7 @@ function Exchange() {
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
-    const value = e.target.value;
+    const value = e.target.value.replace(',', '.'); // Replace comma with dot for decimal
     setSolAmount(value);
     if (isSolToLisana && !isNaN(value) && value !== '') {
       setLisanaAmount((parseFloat(value) * exchangeRate).toString());
@@ -20,7 +20,7 @@ function Exchange() {
 
   // Function to handle Lisana amount change
   const handleLisanaChange = (e) => {
-    const value = e.target.value;
+    const value = e.target.value.replace(',', '.'); // Replace comma with dot for decimal
     setLisanaAmount(value);
     if (!isSolToLisana && !isNaN(value) && value !== '') {
       setSolAmount((parseFloat(value) / exchangeRate).toString());
@@ -30,8 +30,11 @@ function Exchange() {
   // Function to handle swap
   const handleSwap = () => {
     setIsSolToLisana(!isSolToLisana);
-    setSolAmount('');
-    setLisanaAmount('');
+    if (isSolToLisana) {
+      setSolAmount((parseFloat(lisanaAmount) / exchangeRate).toString());
+    } else {
+      setLisanaAmount((parseFloat(solAmount) * exchangeRate).toString());
+    }
   };
 
   return (
