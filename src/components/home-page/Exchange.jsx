@@ -6,20 +6,32 @@ import Link from "next/link";
 function Exchange() {
   const [solAmount, setSolAmount] = useState(''); // State to store the SOL amount
   const [lisanaAmount, setLisanaAmount] = useState(''); // State to store the Lisana amount
+  const [isSolToLisana, setIsSolToLisana] = useState(true); // State to manage conversion direction
   const exchangeRate = 20000; // 1 SOL = 20000 Lisana
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
     const value = parseFloat(e.target.value) || '';
     setSolAmount(value);
-    setLisanaAmount(value * exchangeRate);
+    if (isSolToLisana) {
+      setLisanaAmount(value * exchangeRate);
+    }
   };
 
   // Function to handle Lisana amount change
   const handleLisanaChange = (e) => {
     const value = parseFloat(e.target.value) || '';
     setLisanaAmount(value);
-    setSolAmount(value / exchangeRate);
+    if (!isSolToLisana) {
+      setSolAmount(value / exchangeRate);
+    }
+  };
+
+  // Function to handle swap
+  const handleSwap = () => {
+    setIsSolToLisana(!isSolToLisana);
+    setSolAmount('');
+    setLisanaAmount('');
   };
 
   return (
@@ -50,13 +62,13 @@ function Exchange() {
           <div className="gap-1 lg:gap-2">
             <div className="flex items-center justify-between mb-2">
               <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px]">
-                Amount in SOL you pay:
+                {isSolToLisana ? 'Amount in SOL you pay:' : 'Amount in Lisana you receive:'}
               </p>
               <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] flex items-center">
                 <span className="me-2">
                   <WalletIcon />
                 </span>{" "}
-                {solAmount !== '' ? solAmount : '0.00'} SOL
+                {isSolToLisana ? (solAmount !== '' ? solAmount : '0.00') : (lisanaAmount !== '' ? lisanaAmount : '0.00')} {isSolToLisana ? 'SOL' : '$Lisana'}
               </p>
             </div>
             <div
@@ -65,34 +77,34 @@ function Exchange() {
             >
               <div className="border border-black bg-[#82AAB6] shadow-[1px_1px_0px_0px_#222120] p-1 items-center flex gap-x-2 rounded-full">
                 <Image
-                  src={"/img/svg/sol.svg"}
+                  src={isSolToLisana ? "/img/svg/sol.svg" : "/img/png/logo.png"}
                   width={32}
                   height={32}
-                  alt="sol"
+                  alt={isSolToLisana ? "sol" : "lisana"}
                   className="max-w-[32px] h-auto w-full rounded-full overflow-hidden object-cover"
                 />{" "}
                 <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2">
-                  SOL
+                  {isSolToLisana ? 'SOL' : 'Lisana'}
                 </p>
               </div>
               <input
                 type="number"
                 className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
                 placeholder="0.00"
-                value={solAmount}
-                onChange={handleSolChange}
-                onFocus={() => setSolAmount('')}
+                value={isSolToLisana ? solAmount : lisanaAmount}
+                onChange={isSolToLisana ? handleSolChange : handleLisanaChange}
+                onFocus={() => isSolToLisana ? setSolAmount('') : setLisanaAmount('')}
               />
             </div>
             <div className="flex items-center my-2">
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
-              <button>
+              <button onClick={handleSwap}>
                 <SwapIcon />
               </button>
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
             </div>
             <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2">
-              Amount in Lisana you receive:
+              {isSolToLisana ? 'Amount in Lisana you receive:' : 'Amount in SOL you pay:'}
             </p>{" "}
             <div
               className="bg-[#466E7A] rounded-[58px] border border-black
@@ -100,23 +112,24 @@ function Exchange() {
             >
               <div className="border border-black bg-[#82AAB6] shadow-[1px_1px_0px_0px_#222120] p-1 items-center flex gap-x-2 rounded-full">
                 <Image
-                  src={"/img/png/logo.png"}
+                  src={!isSolToLisana ? "/img/svg/sol.svg" : "/img/png/logo.png"}
                   width={32}
                   height={32}
-                  alt="sponge"
+                  alt={!isSolToLisana ? "sol" : "lisana"}
                   className="max-w-[32px] h-auto w-full rounded-full overflow-hidden object-cover"
                 />{" "}
                 <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2">
-                  Lisana
+                  {!isSolToLisana ? 'SOL' : 'Lisana'}
                 </p>
               </div>
               <input
                 type="number"
                 className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
                 placeholder="0.00"
-                value={lisanaAmount}
-                onChange={handleLisanaChange}
-                onFocus={() => setLisanaAmount('')}
+                value={!isSolToLisana ? solAmount : lisanaAmount}
+                onChange={!isSolToLisana ? handleSolChange : handleLisanaChange}
+                onFocus={() => !isSolToLisana ? setSolAmount('') : setLisanaAmount('')}
+                readOnly
               />
             </div>
           </div>
