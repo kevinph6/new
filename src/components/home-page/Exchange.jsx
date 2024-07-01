@@ -5,16 +5,22 @@ import Link from "next/link";
 
 function Exchange() {
   const [solAmount, setSolAmount] = useState(0); // State to store the SOL amount
+  const [lisanaAmount, setLisanaAmount] = useState(0); // State to store the Lisana amount
   const exchangeRate = 20000; // 1 SOL = 20000 Lisana
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
     const value = parseFloat(e.target.value) || 0;
     setSolAmount(value);
+    setLisanaAmount(value * exchangeRate);
   };
 
-  // Calculate the equivalent Lisana amount
-  const lisanaAmount = solAmount * exchangeRate;
+  // Function to handle Lisana amount change
+  const handleLisanaChange = (e) => {
+    const value = parseFloat(e.target.value) || 0;
+    setLisanaAmount(value);
+    setSolAmount(value / exchangeRate);
+  };
 
   return (
     <>
@@ -107,8 +113,8 @@ function Exchange() {
                 type="number"
                 className="text-sm sm:text-base text-white text-shadows tracking-[0.64px] pe-2 bg-transparent border-0 outline-none text-end placeholder:text-white"
                 placeholder="0.00"
-                value={lisanaAmount.toFixed(2)}
-                readOnly
+                value={lisanaAmount}
+                onChange={handleLisanaChange}
               />
             </div>
           </div>
@@ -126,4 +132,3 @@ function Exchange() {
 }
 
 export default Exchange;
-
