@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function AnotherWayJoin() {
   const [copied, setCopied] = useState(false);
-  const textToCopy = " 0x0bf9cc2ea2af3d2230d25389101bf3a12b8ea544";
+  const textToCopy = "9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS";
 
   const handleCopy = async () => {
     try {
