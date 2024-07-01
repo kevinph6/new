@@ -25,7 +25,7 @@ function Exchange() {
                 Current Raise
               </p>
               <p className="text-sm sm:text-base text-white text-shadows  tracking-[0.64px]">
-                $500,000 USD
+                $439,287 USD
               </p>
             </div>
           </div>
