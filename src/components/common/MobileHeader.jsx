@@ -37,6 +37,12 @@ const MobileHeader = ({ toggleOpen }) => {
           >
             ROADMAP
           </Link>{" "}
+           <Link
+            href="#"
+            className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
+          >
+            Whitepaper
+          </Link>{" "}
           <Link
             href="/"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
