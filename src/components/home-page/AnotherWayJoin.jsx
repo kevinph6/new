@@ -51,7 +51,7 @@ function AnotherWayJoin() {
                 </p>
                 <div>
                   <p className="text-sm md:text-base xl:text-lg text-white text-shadows leading-[160%]     mt-3 text-ellipsis overflow-hidden  truncate	 ">
-                    test wallet here
+                   9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
                   </p>
                   <button
                     className="gradient-bg text-white text-base md:text-lg lg:text-xl px-5 md:px-6 py-3 md:py-4 mt-2"
