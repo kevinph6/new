@@ -26,7 +26,7 @@ export const faqs = [
   {
     question: "Can I buy $LISANA on presale?",
     answer: `
-      Yes, that's the goal. You can easily send SOL to 9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS.
+      Yes, that's the goal. You can easily send SOL to 9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
     `,
   },
   {
