@@ -60,12 +60,11 @@ function About() {
             shadow-[8px_8px_0px_0px_#0C0B0B] "
             >
               <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px]  ">
-                Lisana is the gremlin is here to flip the script on what meme
-                coins are all about. This isn't just another coin in the park.
-                It's the shiniest, newest digital treasure that actually pays
-                you for having fun! Dive into our Telegram channel, make some
-                noise, and start stacking coins just by being your awesome self.
-                🚀
+                Lisana is a revolutionary platform that merges the worlds of digital art and gaming using the power of the Solana blockchain. 
+                We offer a unique experience where players can own, trade, and earn from their in-game assets and digital art collections. 
+                Our platform features engaging, board game-inspired digital games, complete with NFT integration for secure ownership and transparent transactions. 
+                Join us in reshaping the digital landscape, where creativity meets interactive entertainment. 🚀
+                
               </p>
             </div>
           </div>
