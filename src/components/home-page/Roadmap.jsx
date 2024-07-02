@@ -161,31 +161,15 @@ function Roadmap() {
           </div>
 
           {/* Phase 4 */}
-          <div className="flex flex-row flex-nowrap justify-between">
-            <div className="max-w-[500px] w-full md:block hidden"></div>
-            <div className="sm:max-w-[80px] max-w-[50px] lg:max-w-[129px] min-w-[50px] sm:min-w-[80px] lg:min-w-[129px]">
-              <div className="flex flex-col justify-center items-center h-full relative">
-                <div className="lg:w-1.5 w-0.5 sm:w-1 bg-black h-full -ml-0.5 sm:-ml-1 lg:-ml-1.5 -mt-2.5 sm:-mt-3.5 lg:-mt-6 relative">
-                  <div className="absolute -left-2 sm:-left-1.5 top-[70px] md:top-10 xl:top-12 z-10 w-[200px]">
-                    <Image
-                      src={"/img/png/right-line.png"}
-                      width={166}
-                      height={14}
-                      alt="line"
-                      className="w-full max-w-[200px] h-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="max-w-[500px] w-full mt-10 md:mt-3 lg:mt-0 relative z-20">
+          <div className="flex flex-row-reverse md:flex-row flex-nowrap justify-between">
+            <div className="max-w-[500px] w-full mt-10 md:-mt-20 relative z-20">
               <div className="flex flex-col gap-y-4">
                 <div className="border-2 border-black px-5 xl:px-8 py-4 xl:py-6 rounded-3xl shadow-[4px_4px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
                   <p className="text-2xl sm:text-[28px] lg:text-[32px] text-white leading-[100%] tracking-[0.6px] uppercase small-heading">
                     PHASE 4 Q2 2025
                   </p>
                 </div>
-                <div className="border-2 border-black p-5 xl:p-8 rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
+                <div className="border-2 border-black p-5 xl:p-7 rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
                   <ul className="flex flex-col gap-2.5 md:gap-3 xl:gap-4">
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
@@ -198,35 +182,6 @@ function Roadmap() {
                     <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
                       <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
                       Enhanced Cross-Game Compatibility
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Phase 5 */}
-          <div className="flex flex-row-reverse md:flex-row flex-nowrap justify-between">
-            <div className="max-w-[500px] w-full mt-10 md:-mt-20 relative z-20">
-              <div className="flex flex-col gap-y-4">
-                <div className="border-2 border-black px-5 xl:px-8 py-4 xl:py-6 rounded-3xl shadow-[4px_4px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
-                  <p className="text-2xl sm:text-[28px] lg:text-[32px] text-white leading-[100%] tracking-[0.6px] uppercase small-heading">
-                    PHASE 5 Q3 2025
-                  </p>
-                </div>
-                <div className="border-2 border-black p-5 xl:p-7 rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
-                  <ul className="flex flex-col gap-2.5 md:gap-3 xl:gap-4">
-                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
-                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
-                      Mobile App Launch
-                    </li>
-                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
-                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
-                      Partnerships with Major Gaming and Art Platforms
-                    </li>
-                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
-                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
-                      Ongoing Platform Improvements and New Features
                     </li>
                   </ul>
                 </div>
@@ -255,6 +210,51 @@ function Roadmap() {
               </div>
             </div>
             <div className="max-w-[500px] w-full md:block hidden"></div>
+          </div>
+
+          {/* Phase 5 */}
+          <div className="flex flex-row flex-nowrap justify-between">
+            <div className="max-w-[500px] w-full md:block hidden"></div>
+            <div className="sm:max-w-[80px] max-w-[50px] lg:max-w-[129px] min-w-[50px] sm:min-w-[80px] lg:min-w-[129px]">
+              <div className="flex flex-col justify-center items-center h-full relative">
+                <div className="lg:w-1.5 w-0.5 sm:w-1 bg-black h-full -ml-0.5 sm:-ml-1 lg:-ml-1.5 -mt-2.5 sm:-mt-3.5 lg:-mt-6 relative">
+                  <div className="absolute -left-2 sm:-left-1.5 top-[70px] md:top-10 xl:top-12 z-10 w-[200px]">
+                    <Image
+                      src={"/img/png/right-line.png"}
+                      width={166}
+                      height={14}
+                      alt="line"
+                      className="w-full max-w-[200px] h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="max-w-[500px] w-full mt-10 md:mt-3 lg:mt-0 relative z-20">
+              <div className="flex flex-col gap-y-4">
+                <div className="border-2 border-black px-5 xl:px-8 py-4 xl:py-6 rounded-3xl shadow-[4px_4px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
+                  <p className="text-2xl sm:text-[28px] lg:text-[32px] text-white leading-[100%] tracking-[0.6px] uppercase small-heading">
+                    PHASE 5 Q3 2025
+                  </p>
+                </div>
+                <div className="border-2 border-black p-5 xl:p-8 rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] bg-[#B7DFEB]">
+                  <ul className="flex flex-col gap-2.5 md:gap-3 xl:gap-4">
+                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
+                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
+                      Mobile App Launch
+                    </li>
+                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
+                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
+                      Partnerships with Major Gaming and Art Platforms
+                    </li>
+                    <li className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] flex items-start gap-2 lg:gap-3">
+                      <span className="w-2 h-2 mt-2 lg:w-3 lg:h-3 rounded-full bg-black block"></span>
+                      Ongoing Platform Improvements and New Features
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
