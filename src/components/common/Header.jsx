@@ -72,10 +72,16 @@ const Header = () => {
             >
               FAQ
             </Link>
+            <Link
+              href="#"
+              className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
+            >
+              Whitepaper
+            </Link>
           </div>
           <div className="flex items-center gap-x-4">
             <button className="gradient-bg md:py-4 py-2.5 px-4 md:px-6 text-shadows text-white leading-[140%] tracking-[0.32px] text-sm md:text-base  hover:shadow-[2.333px_2.333px_10px_0px_#222120]">
-              Connect Wallet
+              Buy Now
             </button>
 
             <button className="lg:hidden" onClick={toggleOpen}>
