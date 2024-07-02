@@ -7,13 +7,9 @@ export const mediaicons = [
 ];
 export const faqs = [
   {
-    question: "Why Lisana?",
+    question: "Why Lisankfkfkkfa?",
     answer:
-      "Innovative Fusion: Lisana combines digital art and gaming like never before, offering a unique and engaging experience.
-Secure Ownership: Using Solana blockchain technology, we ensure your digital assets are secure and truly yours.
-Fair Rewards: Our platform guarantees fair compensation and rewards for both artists and gamers through transparent transactions.
-Vibrant Community: Join a thriving community of creators and players, and participate in exclusive events and tournaments.
-Cutting-Edge Technology: Leveraging the speed and efficiency of the Solana blockchain, Lisana provides a seamless and enjoyable user experience.",
+      "test.",
   },
   {
     question: "What is the contract address?",
