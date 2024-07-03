@@ -46,7 +46,7 @@ function Exchange() {
           <p>
             In order to continue your purchase of {lisanaAmount} Lisana, send{" "}
             {solAmount} SOL to this wallet: <br />
-            <span className="font-bold text-black">{ownerWallet}</span>
+            <span className="text-black truncate block">{ownerWallet}</span>
           </p>
           <CopyToClipboard
             text={ownerWallet}
