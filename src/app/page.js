@@ -7,6 +7,7 @@ import Faq from "@/components/home-page/Faq";
 import Hero from "@/components/home-page/Hero";
 import HowToBuy from "@/components/home-page/HowToBuy";
 import Roadmap from "@/components/home-page/Roadmap";
+import Tokenomics from "@/components/home-page/Tokenomics";
 
 export default function Home() {
   return (
