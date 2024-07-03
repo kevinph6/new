@@ -54,12 +54,12 @@ const Header = () => {
             >
               HOW TO BUY
             </Link>{" "}
-            <Link
+            {/* <Link
               href="#tokenomics"
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
             >
               TOKENOMICS
-            </Link>{" "}
+            </Link>{" "} */}
             <Link
               href="#roadmap"
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
