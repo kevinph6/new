@@ -1,31 +1,29 @@
-import React from 'react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import {
-  ConnectionProvider,
-  WalletProvider,
-  useWallet,
-} from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { clusterApiUrl } from '@solana/web3.js';
-import '@solana/wallet-adapter-react-ui/styles.css';
-import '../styles/globals.css';
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
+import About from "@/components/home-page/About";
+import AnotherWayJoin from "@/components/home-page/AnotherWayJoin";
+import CoinHub from "@/components/home-page/CoinHub";
+import Faq from "@/components/home-page/Faq";
+import Hero from "@/components/home-page/Hero";
+import HowToBuy from "@/components/home-page/HowToBuy";
+import Roadmap from "@/components/home-page/Roadmap";
+import Tokenomics from "@/components/home-page/Tokenomics";
 
-function MyApp({ Component, pageProps }) {
-  const network = WalletAdapterNetwork.Devnet;
-  const endpoint = clusterApiUrl(network);
-
-  const wallets = [new PhantomWalletAdapter()];
-
+export default function Home() {
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          <Component {...pageProps} />
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    <>
+      <div className="top-bg-img">
+        <Header />
+        <Hero />
+      </div>
+      <About />
+      <HowToBuy />
+      <Tokenomics />
+      <Roadmap />
+      <CoinHub />
+      <Faq />
+      <AnotherWayJoin />
+      <Footer />
+    </>
   );
 }
-
-export default MyApp;
