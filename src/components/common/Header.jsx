@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { HamburgerIcon } from "../helper/Icon";
 import MobileHeader from "./MobileHeader";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,9 +81,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex items-center gap-x-4">
-            <button className="gradient-bg md:py-4 py-2.5 px-4 md:px-6 text-shadows text-white leading-[140%] tracking-[0.32px] text-sm md:text-base  hover:shadow-[2.333px_2.333px_10px_0px_#222120]">
-              Buy Now
-            </button>
+            <WalletMultiButton />
 
             <button className="lg:hidden" onClick={toggleOpen}>
               <HamburgerIcon />
