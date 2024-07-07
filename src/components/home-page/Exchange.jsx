@@ -30,7 +30,7 @@ function Exchange() {
   const handleBuyNow = (e) => {
     e.preventDefault(); // Prevent default form submission
 
-    if (solAmount === "") {
+    if (solAmount === "" || +solAmount < 0.1) {
       toast.error("Small amount to buy is 0.1 SOL");
 
       return;
