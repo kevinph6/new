@@ -41,11 +41,10 @@ function Exchange() {
 
   // Function to handle swapping SOL and Lisana amounts
   const handleSwap = () => {
-    const swappedSolAmount = lisanaAmount ? (parseFloat(lisanaAmount) / exchangeRate).toFixed(2) : "";
-    const swappedLisanaAmount = solAmount ? (parseFloat(solAmount) * exchangeRate).toFixed(2) : "";
-
-    setSolAmount(swappedSolAmount);
-    setLisanaAmount(swappedLisanaAmount);
+    const newSolAmount = lisanaAmount ? (parseFloat(lisanaAmount) / exchangeRate).toFixed(2) : "";
+    const newLisanaAmount = solAmount ? (parseFloat(solAmount) * exchangeRate).toFixed(2) : "";
+    setSolAmount(newSolAmount);
+    setLisanaAmount(newLisanaAmount);
   };
 
   return (
@@ -117,7 +116,6 @@ function Exchange() {
                 placeholder="0.00"
                 value={solAmount}
                 onChange={handleSolChange}
-                onFocus={() => setSolAmount("")}
               />
             </div>
             <div className="flex items-center my-2">
@@ -149,7 +147,6 @@ function Exchange() {
                 placeholder="0.00"
                 value={lisanaAmount}
                 onChange={handleLisanaChange}
-                onFocus={() => setLisanaAmount("")}
               />
             </div>
           </div>
