@@ -14,25 +14,20 @@ const MobileHeader = ({ toggleOpen }) => {
 
         <div className=" flex flex-col items-center gap-8  ">
           <Link
-            href="/"
+            href="/#about"
             className="text-white text-center text-base leading-[160%] tracking-[0.64px]  uppercase text-shadows active nav-links"
           >
             About
           </Link>{" "}
           <Link
-            href="/"
+            href="/#howtobuy"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             HOW TO BUY
           </Link>{" "}
+          
           <Link
-            href="/"
-            className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
-          >
-            TOKENOMICS
-          </Link>{" "}
-          <Link
-            href="/"
+            href="/#roadmap"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             ROADMAP
@@ -44,7 +39,7 @@ const MobileHeader = ({ toggleOpen }) => {
             Whitepaper
           </Link>{" "}
           <Link
-            href="/"
+            href="/#faq"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             FAQ
