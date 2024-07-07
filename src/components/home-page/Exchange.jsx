@@ -39,6 +39,15 @@ function Exchange() {
     setIsSubmitted(true);
   };
 
+  // Function to handle swapping SOL and Lisana amounts
+  const handleSwap = () => {
+    const swappedSolAmount = lisanaAmount ? (parseFloat(lisanaAmount) / exchangeRate).toFixed(2) : "";
+    const swappedLisanaAmount = solAmount ? (parseFloat(solAmount) * exchangeRate).toFixed(2) : "";
+
+    setSolAmount(swappedSolAmount);
+    setLisanaAmount(swappedLisanaAmount);
+  };
+
   return (
     <div className="w-full bg-primary border-2 border-black rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] p-3 sm:p-5 xl:p-8">
       {isSubmitted ? (
@@ -113,7 +122,7 @@ function Exchange() {
             </div>
             <div className="flex items-center my-2">
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
-              <button>
+              <button onClick={handleSwap}>
                 <SwapIcon />
               </button>
               <span className="w-full h-[2px] bg-[#2A5179]"></span>
