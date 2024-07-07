@@ -1,9 +1,9 @@
 import { InstagramIcon, TeligramIcon, TwitterIcon } from "./Icon";
 
 export const mediaicons = [
-  { icon: <TeligramIcon />, link: "https://telegram.org/" },
-  { icon: <TwitterIcon />, link: "https://x.com" },
-  { icon: <InstagramIcon />, link: "https://www.instagram.com" },
+  { icon: <TeligramIcon />, link: "https://t.me/lisanacoin" },
+  { icon: <TwitterIcon />, link: "https://x.com/Lisanacoin" },
+  { icon: <InstagramIcon />, link: "https://www.instagram.com/lisanacoin" },
 ];
 
 export const faqs = [
