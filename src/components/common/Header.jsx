@@ -75,7 +75,7 @@ const Header = () => {
             </Link>
             <Link
               target="_blank"
-              href="/pdf/whitepaper_lisana.pdf"
+              href="/whitepaper.pdf"
               download
               className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
             >
