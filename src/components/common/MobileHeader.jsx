@@ -14,31 +14,35 @@ const MobileHeader = ({ toggleOpen }) => {
 
         <div className=" flex flex-col items-center gap-8  ">
           <Link
+            onClick={toggleOpen}
             href="/#about"
             className="text-white text-center text-base leading-[160%] tracking-[0.64px]  uppercase text-shadows active nav-links"
           >
             About
           </Link>{" "}
           <Link
+            onClick={toggleOpen}
             href="/#howtobuy"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             HOW TO BUY
           </Link>{" "}
-          
           <Link
+            onClick={toggleOpen}
             href="/#roadmap"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             ROADMAP
           </Link>{" "}
-           <Link
+          <Link
             href="#"
+            onClick={toggleOpen}
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
             Whitepaper
           </Link>{" "}
           <Link
+            onClick={toggleOpen}
             href="/#faq"
             className="text-white text-center text-base   tracking-[0.64px]  uppercase text-shadows nav-links"
           >
