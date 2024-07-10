@@ -8,7 +8,7 @@ import Exchange from "./Exchange";
 import Image from "next/image";
 
 function Hero() {
-  const targetDate = new Date("2024-07-19T23:59:59");
+  const targetDate = new Date("2024-07-25T23:59:59");
 
   return (
     <>
