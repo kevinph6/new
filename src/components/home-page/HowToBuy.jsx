@@ -44,7 +44,7 @@ function HowToBuy() {
                 </div>
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center">
                   <Link
-                    href={""}
+                    href={"https://phantom.app/"}
                     className="text-lg md:text-xl xl:text-2xl text-white   leading-[160%] tracking-[0.48px] text-center gradient-bg hover:shadow-[2.333px_2.333px_10px_0px_#222120] md:py-4 py-2.5 px-4 md:px-6 "
                   >
                     Create Wallet
@@ -71,8 +71,10 @@ function HowToBuy() {
                     Buy $Lisana{" "}
                   </p>
                   <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center mt-3 md:mt-5 lg:mt-6">
-                    Visit the link to exchange (SWAP) SOL for Lisana tokens on
-                    Raydium.
+                    To buy $LISANA, ensure you have SOL in your wallet. If not, you can buy SOL on Phantom, 
+                    transfer from another wallet, or purchase on another exchange and send it to your wallet. 
+                    Then, use the form at the top to select the desired amount of $LISANA,  click "Buy Now, then send SOL to the provided wallet. 
+                  "
                   </p>
                 </div>
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center ">
