@@ -74,7 +74,7 @@ function HowToBuy() {
                     To buy $LISANA, ensure you have SOL in your wallet. If not, you can buy SOL on Phantom, 
                     transfer from another wallet, or purchase on another exchange and send it to your wallet. 
                     Then, use the form at the top to select the desired amount of $LISANA,  click "Buy Now, then send SOL to the provided wallet. 
-                  "
+                  
                   </p>
                 </div>
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center ">
