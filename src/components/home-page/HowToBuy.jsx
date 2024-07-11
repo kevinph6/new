@@ -39,8 +39,7 @@ function HowToBuy() {
                     Create a Crypto wallet
                   </p>
                   <p className="text-lg md:text-xl xl:text-2xl text-white text-shadows2 leading-[160%] tracking-[0.48px] text-center mt-3 md:mt-5 lg:mt-6">
-                    Set up a crypto wallet on your smartphone or add crypto
-                    wallet extension to your browser.
+                   Get your wallet of choice for free by downloading Phantom or other wallet apps from your app store or Google Play. If you’re a desktop user, simply head over to Phantom’s website and download the Google Chrome extension.
                   </p>
                 </div>
                 <div className="mt-7 md:mt-10 xl:mt-12 flex flex-row justify-center">
