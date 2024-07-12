@@ -40,7 +40,10 @@ function Exchange() {
   };
 
   return (
-    <div className="w-full bg-primary border-2 border-black rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] p-3 sm:p-5 xl:p-8">
+    <div
+      id="buy"
+      className="w-full bg-primary border-2 border-black rounded-3xl shadow-[8px_8px_0px_0px_#0C0B0B] p-3 sm:p-5 xl:p-8"
+    >
       {isSubmitted ? (
         <div className="text-white text-center">
           <p>
