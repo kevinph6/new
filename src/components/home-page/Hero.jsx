@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { BallIcon } from "../helper/Icon";
 import Link from "next/link";
@@ -42,7 +43,8 @@ function Hero() {
                   </span>
                 </h1>
                 <p className="text-white text-lg sm:text-xl    xl:text-[30px]  text-shadows2 tracking-[0.58px] leading-[140%]  mt-6 lg:mt-8  ">
-                 The Mona Lisa's story never ended, forever blended into the world of crypto and gaming.
+                  The Mona Lisa's story never ended, forever blended into the
+                  world of crypto and gaming.
                 </p>
                 <div className="flex items-center gap-x-4 md:gap-x-6 xl:gap-x-8 mt-6 xl:mt-12">
                   {mediaicons.map((item, index) => (

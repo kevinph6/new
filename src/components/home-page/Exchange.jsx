@@ -3,6 +3,13 @@ import { SwapIcon, WalletIcon } from "../helper/Icon";
 import Image from "next/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import {
+  LAMPORTS_PER_SOL,
+  PublicKey,
+  SystemProgram,
+  Transaction,
+} from "@solana/web3.js";
 
 const exchangeRate = 20000; // 1 SOL = 20000 Lisana
 const ownerWallet = "9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS";
@@ -11,6 +18,9 @@ function Exchange() {
   const [solAmount, setSolAmount] = useState(""); // State to store the SOL amount
   const [lisanaAmount, setLisanaAmount] = useState(""); // State to store the Lisana amount
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const { connection } = useConnection();
+  const { publicKey, sendTransaction } = useWallet();
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
@@ -37,6 +47,29 @@ function Exchange() {
     }
 
     setIsSubmitted(true);
+  };
+
+  const handleBuyNowDapp = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    if (!publicKey) throw new Error("Connect Wallet");
+
+    if (solAmount === "" || +solAmount < 0.1) {
+      throw new Error("Small amount to buy is 0.1 SOL");
+    }
+
+    const transaction = new Transaction();
+    const transferIx = SystemProgram.transfer({
+      fromPubkey: publicKey,
+      toPubkey: new PublicKey(ownerWallet),
+      lamports: +solAmount * LAMPORTS_PER_SOL,
+    });
+
+    transaction.add(transferIx);
+
+    const tx = await sendTransaction(transaction, connection);
+
+    console.log(tx);
   };
 
   return (
@@ -148,8 +181,22 @@ function Exchange() {
             </div>
           </div>
           <button
-            onClick={handleBuyNow}
             className="only-gradient-bg w-full py-3 md:py-4 text-center text-sm sm:text-base md:text-xl text-white text-shadows tracking-[0.64px] border border-black shadow-[2.333px_2.333px_0px_0px_#222120] rounded-full hover:shadow-[2.333px_2.333px_10px_0px_#222120] transition-all duration-300 ease-in-out"
+            onClick={(e) => {
+              toast.promise(() => handleBuyNowDapp(e), {
+                pending: "Loading...",
+                success: "Success",
+                error: {
+                  render({ data }) {
+                    console.error(data);
+
+                    if (data instanceof Error) {
+                      return data.message;
+                    }
+                  },
+                },
+              });
+            }}
           >
             Buy Now
           </button>

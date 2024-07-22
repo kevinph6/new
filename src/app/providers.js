@@ -2,7 +2,10 @@
 
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import { clusterApiUrl } from "@solana/web3.js";
-import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
+import {
+  PhantomWalletAdapter,
+  TrustWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -13,7 +16,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 
 const network = WalletAdapterNetwork.Devnet;
 const endpoint = clusterApiUrl(network);
-const wallets = [new PhantomWalletAdapter()];
+const wallets = [new PhantomWalletAdapter(), new TrustWalletAdapter()];
 
 export default function Providers({ children }) {
   return (

@@ -83,13 +83,13 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex items-center gap-x-4">
-            {/* <WalletMultiButton /> */}
-            <Link
+            <WalletMultiButton />
+            {/* <Link
               href="#buy"
               className="only-gradient-bg py-3 px-4 sm:px-8 md:py-4 text-sm sm:text-base md:text-xl text-white text-shadows tracking-[0.64px] border border-black shadow-[2.333px_2.333px_0px_0px_#222120] rounded-full hover:shadow-[2.333px_2.333px_10px_0px_#222120] transition-all duration-300 ease-in-out"
             >
               Buy Now
-            </Link>
+            </Link> */}
 
             <button className="lg:hidden" onClick={toggleOpen}>
               <HamburgerIcon />
