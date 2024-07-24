@@ -3,7 +3,11 @@ import { SwapIcon, WalletIcon } from "../helper/Icon";
 import Image from "next/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import {
+  useConnection,
+  useWallet,
+  WalletNotSelectedError,
+} from "@solana/wallet-adapter-react";
 import {
   LAMPORTS_PER_SOL,
   PublicKey,
@@ -201,7 +205,15 @@ function Exchange() {
                       },
                     });
                   }
-                : () => setVisible(true)
+                : async () => {
+                    try {
+                      await connect();
+                    } catch (error) {
+                      if (error instanceof WalletNotSelectedError) {
+                        setVisible(true);
+                      }
+                    }
+                  }
             }
           >
             {connected ? "Buy Now" : "Connect Wallet"}
@@ -210,7 +222,7 @@ function Exchange() {
       )}
       <p className="mt-4 font-bold">
         IF YOU CAN’T CONNECT YOUR WALLET,JUST SEND SOL TO <br />
-        <span className="text-[#9945FF] block my-2">
+        <span className="text-[#9945FF] block my-2 text-ellipsis overflow-hidden">
           9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
         </span>
         AND TOKENS WILL BE AIRDROPPED TO THE SENDING WALLET. NB: DON’T USE A CEX
