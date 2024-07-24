@@ -10,6 +10,7 @@ import {
   SystemProgram,
   Transaction,
 } from "@solana/web3.js";
+import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 
 const exchangeRate = 20000; // 1 SOL = 20000 Lisana
 const ownerWallet = "9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS";
@@ -20,7 +21,8 @@ function Exchange() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const { connection } = useConnection();
-  const { publicKey, sendTransaction } = useWallet();
+  const { connected, publicKey, sendTransaction, connect } = useWallet();
+  const { setVisible } = useWalletModal();
 
   // Function to handle SOL amount change
   const handleSolChange = (e) => {
@@ -182,26 +184,38 @@ function Exchange() {
           </div>
           <button
             className="only-gradient-bg w-full py-3 md:py-4 text-center text-sm sm:text-base md:text-xl text-white text-shadows tracking-[0.64px] border border-black shadow-[2.333px_2.333px_0px_0px_#222120] rounded-full hover:shadow-[2.333px_2.333px_10px_0px_#222120] transition-all duration-300 ease-in-out"
-            onClick={(e) => {
-              toast.promise(() => handleBuyNowDapp(e), {
-                pending: "Loading...",
-                success: "Success",
-                error: {
-                  render({ data }) {
-                    console.error(data);
+            onClick={
+              connected
+                ? (e) => {
+                    toast.promise(() => handleBuyNowDapp(e), {
+                      pending: "Loading...",
+                      success: "Success",
+                      error: {
+                        render({ data }) {
+                          console.error(data);
 
-                    if (data instanceof Error) {
-                      return data.message;
-                    }
-                  },
-                },
-              });
-            }}
+                          if (data instanceof Error) {
+                            return data.message;
+                          }
+                        },
+                      },
+                    });
+                  }
+                : () => setVisible(true)
+            }
           >
-            Buy Now
+            {connected ? "Buy Now" : "Connect Wallet"}
           </button>
         </div>
       )}
+      <p className="mt-4 font-bold">
+        IF YOU CAN’T CONNECT YOUR WALLET,JUST SEND SOL TO <br />
+        <span className="text-[#9945FF] block my-2">
+          9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
+        </span>
+        AND TOKENS WILL BE AIRDROPPED TO THE SENDING WALLET. NB: DON’T USE A CEX
+        TO SEND SOL! USE YOUR OWN WALLET.
+      </p>
     </div>
   );
 }
