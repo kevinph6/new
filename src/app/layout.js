@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
           <img
             height="1"
             width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id= 1003530747901090&ev=PageView&noscript=1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1003530747901090&ev=PageView&noscript=1"
           />
         </noscript>
       </body>
