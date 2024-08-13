@@ -101,6 +101,9 @@ const CountdownTimer = ({ targetDate }) => {
       ) : (
         <span>Time's up!</span>
       )}
+      <p className="mt-4 text-center text-white heading-shadow text-base sm:text-lg lg:text-[18px] font-thin uppercase">
+        Listing Price: 1 $LISANA = $0.05
+      </p>
     </div>
   );
 };

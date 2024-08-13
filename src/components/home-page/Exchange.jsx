@@ -102,6 +102,9 @@ function Exchange() {
       ) : (
         <div className="flex flex-col gap-5 sm:gap-7 xl:gap-8">
           <div className="gap-1 lg:gap-2">
+            <p className="text-center text-sm sm:text-base text-white text-shadows tracking-[0.64px]">
+              1 $LISANA = $0.005
+            </p>
             <div className="flex items-center justify-between">
               <p className="text-sm sm:text-base text-white text-shadows tracking-[0.64px]">
                 1 SOL
