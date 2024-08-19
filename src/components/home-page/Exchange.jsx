@@ -222,7 +222,7 @@ function Exchange() {
       )}
       <p className="mt-4 font-bold">
         IF YOU CAN’T CONNECT YOUR WALLET,JUST SEND SOL TO <br />
-        <span className="text-[#9945FF] block my-2 text-ellipsis overflow-hidden">
+        <span className="text-[#9945FF] text-xs block my-2 text-ellipsis overflow-hidden">
           9JyJcgmcGqsrqD2SfV58yovHgCqykSUncKHdtFxhwiGS
         </span>
         AND TOKENS WILL BE AIRDROPPED TO THE SENDING WALLET. NB: DON’T USE A CEX
