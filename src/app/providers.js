@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  PhantomWalletAdapter,
-  TrustWalletAdapter,
-  WalletConnectWalletAdapter,
-} from "@solana/wallet-adapter-wallets";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -15,11 +11,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 
 const rpcUrl =
   "https://mainnet.helius-rpc.com/?api-key=a6960cc7-9546-44ef-b51c-83c7026d34e3";
-const wallets = [
-  new PhantomWalletAdapter(),
-  new TrustWalletAdapter(),
-  new WalletConnectWalletAdapter(),
-];
+const wallets = [new PhantomWalletAdapter()];
 
 export default function Providers({ children }) {
   return (
